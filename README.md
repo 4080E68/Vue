@@ -1,5 +1,5 @@
-##迴圈 [v-for](https://github.com/4080E68/Vue/edit/master/README.md#v-for%E8%AA%9E%E6%B3%95)
-##資料綁定  [v-bind](https://github.com/4080E68/Vue/edit/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
+## 迴圈 [v-for](https://github.com/4080E68/Vue/edit/master/README.md#v-for%E8%AA%9E%E6%B3%95)
+## 資料綁定  [v-bind](https://github.com/4080E68/Vue/edit/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
 # 表達式
 ```
 1.在表達式中使用反引號
