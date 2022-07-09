@@ -76,3 +76,33 @@ EX:
               </li>
 </template>
 ```
+# v-bind 資料綁定
+### 縮寫 :<html標籤>
+```
+綁定src v-bind:src="breakfastShop.imgUrl" 或是 :src="breakfastShop.imgUrl"
+```
+### 變數綁定
+```
+<button type="submit" :disabled="isFull">送出</button>
+當中的disabled會判斷如果傳入的是true則顯示disabled反之則相反
+```
+### 搭配 v-for
+```
+也可在for迴圈裡面使用
+<tr v-for="item in products" :key="item.imgUrl">
+  <img :src="item.imgUrl" class="square-img" alt="">
+</tr>
+```
+### 透過綁定動態切換圖片大小
+```
+這裡需使用反引號帶入變數
+<input type="range" min="100" max="1000" v-model="imageSize">
+<img :src="`${breakfastShop.resizeImg}&w=${imageSize}`" alt="">
+```
+### 動態屬性綁定
+```
+先在button判斷disabled的值
+<button type="button" v-on:click="dynamic = dynamic === 'disabled' ? 'readonly':'disabled'">切換為{{ dynamic }}</button>
+再裡用中括號直接將判斷的值寫入為HTML格式
+<input type="text" :[dynamic] :value="name">
+```
