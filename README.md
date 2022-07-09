@@ -8,6 +8,9 @@
 <p>{{ say('toad') }}</p>
 ```
 ### v-pre取消編譯
+```
+<p v-pre>這段文字不會被轉譯：{{ name }}在{{ position }}吃早餐</p>
+```
 ### v-html 寫入html格式
 ```
 <div v-html="rawHtml"></div>
