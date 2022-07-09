@@ -60,3 +60,19 @@ EX:
                 </tr>
 </template>
 ```
+# v-if、v-else-if、v-else
+```
+語法:<v-if="判斷式">
+<li v-if="item.price <= 35">
+   {{ item.name}} / {{ item.price }} 元
+</li>
+```
+### v-if盡量不要跟v-for一起使用需分開!
+```
+如需同時使用請使用template方式
+<template v-for="(item, key) in products" v-bind:key="item.name">
+              <li v-if="item.price <= 35">
+                {{ item.name}} / {{ item.price }} 元
+              </li>
+</template>
+```
