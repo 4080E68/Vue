@@ -1,6 +1,7 @@
 ## 迴圈 [v-for](https://github.com/4080E68/Vue/blob/master/README.md#v-for%E8%AA%9E%E6%B3%95)
 ## 資料綁定  [v-bind](https://github.com/4080E68/Vue/blob/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
-## 資料綁定  [v-bind](https://github.com/4080E68/Vue/blob/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
+## 資料模型  [v-model](https://github.com/4080E68/Vue/blob/master/README.md#v-model)
+## 事件  [v-on](https://github.com/4080E68/Vue/blob/master/README.md#v-on%E4%BA%8B%E4%BB%B6)
 
 # 表達式
 ```
