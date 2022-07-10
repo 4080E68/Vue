@@ -193,7 +193,7 @@ v-model.number 將輸入的資料型態改為數字，但如果type為text時需
 v-model.trim 將前後空白都刪除，常使用在email格式。
 ```
 # v-on事件
-##### 縮寫 @事件 ex @click
+##### 縮寫 ex @click="函式()"
 ```
 通常與method搭配
 傳入參數寫法
