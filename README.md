@@ -109,3 +109,64 @@ EX:
 再裡用中括號直接將判斷的值寫入為HTML格式
 <input type="text" :[dynamic] :value="name">
 ```
+### 切換 Class
+```
+如果遇到class名稱當中有-號須將class名稱用字串符號包住
+可在值上定義一個變數，回傳true或是false
+isTransform: true,
+boxColor: false,
+:class="{ rotate : isTransform ,'bg-danger': boxColor }
+
+也可使用object方式綁定class
+:class="ObjectClass"
+ObjectClass:{
+        rotate: true, 
+        'bg-danger': true
+}
+
+陣列寫法
+:class="arrayClass"
+透過v-on傳入class樣式
+v-on:click="addClass(['btn-primary', 'disabled'])//需使用陣列格式
+addClass(arr) {
+  this.arrayClass.push(...arr);
+}
+```
+
+# v-model
+
+##### 單選
+```
+如果再checkbox上綁定v-model會以boolean方式回傳
+<input type="checkbox" class="form-check-input" id="check1" v-model="checkAnswer">
+
+使用true-value、false-value達到三元運算子效果
+因為回傳得一定是true或是false所以可以使用true-value
+<input type="checkbox" class="form-check-input" id="check2" 
+    v-model="checkAnswer2"
+    true-value="吃飽了"
+    false-value="還沒">
+```
+
+##### 複選
+```
+<p>{{ checkAnswer3.join(' ') }}</p>
+join(以何種方式區隔)會將陣列中所有的元素連接、合併成一個字串，並回傳此字串。
+使用複選時須加上value的值，因為在複選時是使用陣列的方式回傳
+而回傳的值是取決於value，所以在使用前也需宣告一個空的陣列。
+
+<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="check3" value="蛋餅" v-model="checkAnswer3">
+    <label class="form-check-label" for="check3">蛋餅</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="check4" value="蘿蔔糕" v-model="checkAnswer3">
+    <label class="form-check-label" for="check4">蘿蔔糕</label>
+</div>
+```
+##### radio 單選框
+```
+在radio裡面因為只能單選，所以在回傳值是會直接將原有得值取代
+也是使用value作為回傳的值
+<input type="radio" class="form-check-input" id="radio1" value="蛋餅" v-model="radioAnswer">
+```
