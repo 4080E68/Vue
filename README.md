@@ -1,5 +1,6 @@
 ## 迴圈 [v-for](https://github.com/4080E68/Vue/blob/master/README.md#v-for%E8%AA%9E%E6%B3%95)
 ## 資料綁定  [v-bind](https://github.com/4080E68/Vue/blob/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
+## 資料綁定  [v-bind](https://github.com/4080E68/Vue/blob/master/README.md#v-bind-%E8%B3%87%E6%96%99%E7%B6%81%E5%AE%9A)
 
 # 表達式
 ```
@@ -189,4 +190,29 @@ join(以何種方式區隔)會將陣列中所有的元素連接、合併成一�
 v-model.lazy 用戶需按下enter或點擊輸入框外面資料才會傳遞回去
 v-model.number 將輸入的資料型態改為數字，但如果type為text時需要輸入的第一個字為數字才會把型態轉為number
 v-model.trim 將前後空白都刪除，常使用在email格式。
+```
+# v-on事件
+##### 縮寫 @事件 ex @click
+```
+通常與method搭配
+傳入參數寫法
+@click="change('isTransform')
+
+取消預設屬性
+@submit.prevent
+```
+##### 動態事件(較少使用)
+```
+event: 'click'
+<input type="text" v-model="event"> 由此輸入可以修改下面程式碼的事件
+<input type="text" @[event]="dynamicEvent">
+```
+
+##### 套用多種事件(無法使用參數)
+```
+<button class="box" @="{
+    事件:函式
+    mousedown: down,
+    mouseup:up,
+}">
 ```
