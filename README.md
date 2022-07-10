@@ -170,3 +170,23 @@ join(以何種方式區隔)會將陣列中所有的元素連接、合併成一�
 也是使用value作為回傳的值
 <input type="radio" class="form-check-input" id="radio1" value="蛋餅" v-model="radioAnswer">
 ```
+##### select選擇框
+```
+在select裡面也是使用value來當回傳值
+可以搭配v-for將option顯示
+<option :value="item.name" v-for="(item, index) in products" :key="item.name">{{item.name}}</option>
+
+將需要顯示的選項value設為空字串在設定disabled
+<option value="" disabled>說吧，你要吃什麼？</option>
+```
+##### select多選框
+```
+同上，但是需要再加上multiple
+按下ctrl時就可以複選
+```
+##### 修飾符
+```
+v-model.lazy 用戶需按下enter或點擊輸入框外面資料才會傳遞回去
+v-model.number 將輸入的資料型態改為數字，但如果type為text時需要輸入的第一個字為數字才會把型態轉為number
+v-model.trim 將前後空白都刪除，常使用在email格式。
+```
